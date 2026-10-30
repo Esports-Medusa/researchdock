@@ -81,3 +81,19 @@ Decision statuses are exactly **Proposed / Provisional / Accepted / Superseded /
 - **Date:** 2026-10-30 (UTC+08:00)
 - **Implementation status:** Documentation/ignore rules created; runtime enforcement unimplemented.
 - **Validation evidence:** Representative ignore checks only; runtime permissions Not run.
+
+## ADR-006
+
+- **Title:** Public repository visibility with preserved Git history
+- **Status:** Accepted
+- **Context:** The repository was initially created private under the user's earlier instruction. The user subsequently requested public portfolio access, contingent on review of current files and full Git history, without replacing the repository or rewriting history.
+- **Options:** Keep the repository private; publish the existing repository after review and acceptance of identified personal metadata; defer publication for remediation if other risks appear.
+- **Decision:** Change the existing `Esports-Medusa/researchdock` repository to Public. Preserve its identity, files, two existing commits, main/upstream and settings. The user explicitly accepted publication of the personal email already present in author/committer metadata before the visibility change. Do not reproduce the email in documentation.
+- **Rationale:** Current content is documentation/scaffolding intended for portfolio review. The only identified personal disclosure was historical commit email metadata, which was surfaced and accepted; no secret or raw-session content was identified by the review.
+- **Consequences:** Historical author/committer email becomes publicly accessible and public copies may persist. Preserve history; changing future Git identity would not remove existing metadata. Continue reviewing future diffs/history and exclude secrets, private data and raw sessions. Public visibility does not enable deployment or change the CI/CD technical plan.
+- **Evidence:** [Development log](DEVELOPMENT_LOG.md), [current status](STATUS.md), and https://github.com/Esports-Medusa/researchdock. GitHub API reports public visibility, the same repository ID, unchanged checked settings and Pages disabled.
+- **Decision basis:** Explicit user instruction to publish after review, followed by explicit acceptance of the identified historical personal-email exposure. No inferred approval to expose other sensitive content or enable hosting.
+- **Revisit trigger:** New secret/privacy findings, changed data/workload scope or a user request to change visibility. Stop relevant publication and seek instructions rather than rewriting history automatically.
+- **Date:** 2026-10-30T23:02:43+08:00
+- **Implementation status:** Existing repository visibility changed to Public; no new repository, history rewrite, Pages or cloud deployment.
+- **Validation evidence:** Reviewed 22 current files, both reachable commits and all 33 local Git objects (20 blobs); remote references matched the reviewed main. Queried GitHub before and after the change and verified public visibility, unchanged identity and selected settings. Pattern/manual review is bounded evidence, not a guarantee against every possible secret.

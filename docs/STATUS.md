@@ -4,7 +4,7 @@ Updated: 2026-10-30 (Asia/Shanghai, UTC+08:00).
 
 ## Observed
 
-- The dedicated directory was empty and outside a Git repository. Local Git initialization succeeded after sandbox approval. A private GitHub repository has now been created at https://github.com/Esports-Medusa/researchdock and configured as origin. The first safe push to main is verified; local main tracks origin/main. See the synchronization evidence in DEVELOPMENT_LOG.
+- The dedicated directory was empty and outside a Git repository. Local Git initialization succeeded after sandbox approval. The GitHub repository at https://github.com/Esports-Medusa/researchdock is configured as origin and is now Public after a full-history review and explicit user acceptance of the historical commit email exposure. See ADR-006 for the visibility decision. The first safe push to main is verified; local main tracks origin/main. See the synchronization evidence in DEVELOPMENT_LOG.
 - Required documents and reserved directories have been created. Initialization is part of M0, not completion of M0, M1, or Phase 01.
 - Read-only tool checks are recorded in [ENVIRONMENT](ENVIRONMENT.md); initialization validation is recorded in [DEVELOPMENT_LOG](DEVELOPMENT_LOG.md).
 
