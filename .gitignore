@@ -1,0 +1,57 @@
+# Local configuration; reviewed examples remain trackable.
+.env
+.env.*
+!.env.example
+!*.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.ppk
+id_rsa
+id_ecdsa
+id_ed25519
+credentials.json
+service-account*.json
+.aws/
+.ssh/
+secrets/
+# Python and editor caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+# Frontend and build products
+node_modules/
+dist/
+build/
+coverage/
+*.egg-info/
+# Terraform state, plans, and real variable inputs
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+*.tfvars
+*.tfvars.json
+!*.tfvars.example
+!*.tfvars.json.example
+crash.log
+# Runtime data and volumes
+.local/
+data/postgres/
+volumes/
+infra/volumes/
+postgres-data/
+# Raw execution evidence stays local. Reviewed summaries live in docs.
+runs/*
+!runs/README.md
+# Do not ignore tests, docs, benchmark definitions or synthetic fixtures.
